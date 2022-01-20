@@ -1,9 +1,11 @@
 import "./index.css";
-import Fetchhttp from "./Axios";
+import Gethttp from "./Axios";
 
 function MainPage() {
-  const category = "getcategory";
-  Fetchhttp(category);
+  const url = "http://localhost:3000/";
+  const data = Gethttp(url);
+  console.log(data);
+
   return (
     <div>
       {/* Navigation */}
