@@ -1,6 +1,9 @@
 import "./index.css";
+import Fetchhttp from "./Axios";
 
 function MainPage() {
+  const category = "getcategory";
+  Fetchhttp(category);
   return (
     <div>
       {/* Navigation */}
@@ -48,6 +51,7 @@ function MainPage() {
                     카테고리
                   </a>
                   <ul
+                    id="category"
                     className="dropdown-menu"
                     aria-labelledby="navbarDropdown"
                   >
