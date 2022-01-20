@@ -6,9 +6,12 @@ function Gethttp(url) {
 
   useEffect(() => {
     const fetchdata = async () => {
-      const result = await axios.get(url);
-      setdata(result.data);
-      // console.log(result.data);
+      try {
+        const result = await axios.get(url);
+        setdata(result.data);
+      } catch (err) {
+        console.log(err);
+      }
     };
     fetchdata();
   }, [url]);

@@ -5,7 +5,6 @@ function MainPage() {
   const url = "http://localhost:3000/";
   const data = Gethttp(url);
   console.log(data);
-
   return (
     <div>
       {/* Navigation */}
@@ -229,7 +228,7 @@ function MainPage() {
           <a
             href="/#"
             className="list-group-item list-group-item-action disabled"
-            tabindex="-1"
+            tabIndex="-1"
             aria-disabled="true"
           >
             A disabled link item
