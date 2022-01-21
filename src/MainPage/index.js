@@ -1,12 +1,10 @@
 import "./index.css";
-import Gethttp from "./Axios";
+import GetCategory from "./getCategory";
 
 function MainPage() {
-  const url = "http://localhost:3000/";
-  const data = Gethttp(url);
-  console.log(data);
   return (
     <div>
+      <div></div>
       {/* Navigation */}
       <div className="header shadow-sm">
         <nav className="navbar navbar-expand-lg navbar-light bg-white">
@@ -56,16 +54,8 @@ function MainPage() {
                     className="dropdown-menu"
                     aria-labelledby="navbarDropdown"
                   >
-                    <li>
-                      <a className="dropdown-item" href="/#">
-                        게임장르1
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="/#">
-                        게임장르2
-                      </a>
-                    </li>
+                    <GetCategory />
+
                     <li>
                       <hr className="dropdown-divider" />
                     </li>
