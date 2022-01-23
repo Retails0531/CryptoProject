@@ -1,21 +1,21 @@
 {
   "category": [
     {
-      "name": "game1",
+      "name": "list1",
       "url": "url1",
       "size": "large",
       "color": "pink",
       "image": "../img/pink_t.png"
     },
     {
-      "name": "game2",
+      "name": "list2",
       "url": "url2",
       "size": "small",
       "color": "blue",
       "image": "../img/blue_p.png"
     },
     {
-      "name": "game3",
+      "name": "list3",
       "url": "url3",
       "size": "large",
       "color": "yellow",
