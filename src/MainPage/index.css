@@ -11,7 +11,6 @@
   padding: 0;
   font-size: 14px;
   line-height: 1.7em;
-  color: red;
 
   font-family: "OTWelcomeBA";
 }
@@ -104,8 +103,6 @@
 .main-side {
   width: 314px;
   height: 950px;
-
-  background-color: pink;
 }
 
 .imagesection {
@@ -120,7 +117,7 @@
 .imagesection-content {
   width: 306px;
   height: 280px;
-  background-color: pink;
+
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -129,6 +126,10 @@
 
 .carousel-item {
   filter: brightness(80%);
+}
+
+.row {
+  display: flex;
 }
 
 body {
@@ -140,10 +141,10 @@ body {
 }
 
 .project {
-  margin-top: 20px;
+  margin-top: 40px;
   width: 766px;
   height: 650px;
-  background-color: pink;
+  border: 1px solid gray;
 }
 
 .contents {
@@ -153,6 +154,7 @@ body {
   border-width: 3px;
   border-image: linear-gradient(to left, #fbc2eb 0%, #a6c1ee 100%) 100% 0 100% 0/0px
     0 3px 0 stretch;
+  background-color: black;
 }
 #contents-last {
   border: none;
@@ -160,5 +162,76 @@ body {
 
 .footer {
   height: 200px;
-  background-color: pink;
+  border: 1px solid gray;
+}
+
+.side-head {
+  width: 100%;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.side-name {
+  font-size: large;
+}
+
+.side-date {
+}
+
+.side-contents {
+  width: 100%;
+  height: 110px;
+
+  padding-top: 20px;
+  display: flex;
+}
+
+#side-image {
+  width: 110px;
+  height: 100%;
+}
+
+#side-number {
+  padding-left: 10px;
+  width: 35px;
+  height: 100%;
+
+  font-size: 18px;
+  color: orange;
+}
+
+.side-box {
+  width: 169px;
+  height: 100%;
+}
+
+#side-category {
+  font-size: 12px;
+  color: gray;
+}
+
+#side-name {
+  font-size: 30px;
+}
+
+#side-rate {
+  color: orange;
+}
+
+.carousel-test {
+  width: 480px;
+  height: 100%;
+}
+
+.testbox {
+  width: 766px;
+  height: 280px;
+  display: flex;
+}
+.testbox2 {
+  width: 306px;
+  height: 280px;
 }

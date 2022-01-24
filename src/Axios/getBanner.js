@@ -1,4 +1,6 @@
 import Gethttp from "./Axios";
+import Carousel from "./carousel";
+import PreviousNextMethods from "../Axios/carousel";
 
 export default function GetBanner() {
   return (
@@ -99,64 +101,133 @@ export default function GetBanner() {
         <section className="main">
           <div className="main-top">
             <div className="imagesection">
-              <div
-                id="carouselSlidesOnly"
-                class="carousel slide"
-                data-bs-ride="carousel"
-              >
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="carousel1.jpg" class="d-block w-auto" alt="..." />
-                  </div>
-                  <div class="carousel-item">
-                    <img src="carousel2.jpg" class="d-block w-auto" alt="..." />
-                  </div>
-                  <div class="carousel-item">
-                    <img src="carousel3.jpg" class="d-block w-auto" alt="..." />
-                  </div>
-                </div>
-              </div>
-              <div className="imagesection-content">
-                <h1>head</h1>
-                <h2>body</h2>
-                <h3>indicator 추가</h3>
-                <h4>
-                  현재 slide index <p></p>가져오는 함수 추가
-                </h4>
-              </div>
+              <PreviousNextMethods />
             </div>
 
             <div className="project">
-              <h1>project</h1>
-              <h2>contents</h2>
+              <h1>Guide</h1>
+              <h2>신규공지</h2>
+              <h3>image</h3>
+              <h1>Guide</h1>
+              <h2>웹 이용가이드 작성</h2>
               <h3>image</h3>
             </div>
           </div>
           <aside className="main-side">
-            <h1>side</h1>
-            <h2>contents</h2>
-            <h3>image</h3>
+            <div className="side-head">
+              <div className="side-name">인기 프로젝트</div>
+              <a class="btn btn-outline-secondary" href="/login" role="button">
+                <u>전체 보기</u>
+              </a>
+            </div>
+            <div className="side-date">00/00/00 기준</div>
+
+            <div className="side-contents">
+              <div id="side-image">
+                <img id="side-image" src="/GameBanner/game_1.jpg"></img>
+              </div>
+              <div id="side-number">1</div>
+              <div className="side-box">
+                <div id="side-category">카테고리/카테고리</div>
+                <div id="side-name">게임 제목</div>
+                <div id="side-rate">100% 달성</div>
+              </div>
+            </div>
+
+            <div className="side-contents">
+              <div id="side-image">
+                <img id="side-image" src="/GameBanner/game_1.jpg"></img>
+              </div>
+              <div id="side-number">2</div>
+              <div className="side-box">
+                <div id="side-category">카테고리/카테고리</div>
+                <div id="side-name">게임 제목</div>
+                <div id="side-rate">100% 달성</div>
+              </div>
+            </div>
+
+            <div className="side-contents">
+              <div id="side-image">
+                <img id="side-image" src="/GameBanner/game_1.jpg"></img>
+              </div>
+              <div id="side-number">3</div>
+              <div className="side-box">
+                <div id="side-category">카테고리/카테고리</div>
+                <div id="side-name">게임 제목</div>
+                <div id="side-rate">100% 달성</div>
+              </div>
+            </div>
+
+            <div className="side-contents">
+              <div id="side-image">
+                <img id="side-image" src="/GameBanner/game_1.jpg"></img>
+              </div>
+              <div id="side-number">4</div>
+              <div className="side-box">
+                <div id="side-category">카테고리/카테고리</div>
+                <div id="side-name">게임 제목</div>
+                <div id="side-rate">100% 달성</div>
+              </div>
+            </div>
+
+            <div className="side-contents">
+              <div id="side-image">
+                <img id="side-image" src="/GameBanner/game_1.jpg"></img>
+              </div>
+              <div id="side-number">5</div>
+              <div className="side-box">
+                <div id="side-category">카테고리/카테고리</div>
+                <div id="side-name">게임 제목</div>
+                <div id="side-rate">100% 달성</div>
+              </div>
+            </div>
+
+            <div className="side-contents">
+              <div id="side-image">
+                <img id="side-image" src="/GameBanner/game_1.jpg"></img>
+              </div>
+              <div id="side-number">6</div>
+              <div className="side-box">
+                <div id="side-category">카테고리/카테고리</div>
+                <div id="side-name">게임 제목</div>
+                <div id="side-rate">100% 달성</div>
+              </div>
+            </div>
+
+            <div className="side-contents">
+              <div id="side-image">
+                <img id="side-image" src="/GameBanner/game_1.jpg"></img>
+              </div>
+              <div id="side-number">7</div>
+              <div className="side-box">
+                <div id="side-category">카테고리/카테고리</div>
+                <div id="side-name">게임 제목</div>
+                <div id="side-rate">100% 달성</div>
+              </div>
+            </div>
+
+            <div className="side-contents">
+              <div id="side-image">
+                <img id="side-image" src="/GameBanner/game_1.jpg"></img>
+              </div>
+              <div id="side-number">8</div>
+              <div className="side-box">
+                <div id="side-category">카테고리/카테고리</div>
+                <div id="side-name">게임 제목</div>
+                <div id="side-rate">100% 달성</div>
+              </div>
+            </div>
           </aside>
         </section>
         <div className="contents">
-          <h1>contents</h1>
-          <h2>contents</h2>
-          <h3>image</h3>
+          <h1>인기 장르</h1>
         </div>
+
         <div className="contents">
-          <h1>contents</h1>
-          <h2>contents</h2>
-          <h3>image</h3>
-        </div>
-        <div className="contents">
-          <h1>contents</h1>
-          <h2>contents</h2>
-          <h3>image</h3>
+          <h1>급상승</h1>
         </div>
         <div id="contents-last" className="contents">
-          <h1>contents</h1>
-          <h2>contents</h2>
-          <h3>image</h3>
+          <h1>공개 예정</h1>
         </div>
       </main>
       <footer className="footer">
