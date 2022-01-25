@@ -11,8 +11,38 @@
   padding: 0;
   font-size: 14px;
   line-height: 1.7em;
-
   font-family: "OTWelcomeBA";
+  image-rendering: -webkit-optimize-contrast;
+
+  backface-visibility: hidden;
+}
+
+.slick-slide {
+  display: inline-block;
+}
+
+.slick-track {
+  width: 1000px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.slick-slide {
+  visibility: hidden;
+}
+.slick-slide.slick-active {
+  visibility: visible;
 }
 
 .header-layout {
@@ -90,10 +120,7 @@
   display: flex;
   justify-content: center;
   height: 1000px;
-  border-style: solid;
-  border-width: 3px;
-  border-image: linear-gradient(to left, #fbc2eb 0%, #a6c1ee 100%) 100% 0 100% 0/0px
-    0 3px 0 stretch;
+  box-shadow: 0px 15px 10px -23px #111;
 }
 
 .main-top {
@@ -111,21 +138,32 @@
   display: flex;
 }
 
-.carousel-inner {
+.imagesection-image {
   width: 460px;
+  filter: brightness(85%);
 }
-.imagesection-content {
-  width: 306px;
+.imagesection-contents {
+  width: 300px;
   height: 280px;
-
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  box-shadow: 0px 15px 10px -23px #111;
 }
 
-.carousel-item {
-  filter: brightness(80%);
+.imagesection-contentsbox {
+  height: 230px;
+}
+
+.imagesection-contentsbox-a1 {
+  padding-top: 20px;
+  font-size: 50px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+}
+.imagesection-contentsbox-a2 {
+  padding-top: 20px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
 }
 
 .row {
@@ -150,12 +188,29 @@ body {
 .contents {
   height: 400px;
   width: 1160px;
-  border-style: solid;
-  border-width: 3px;
-  border-image: linear-gradient(to left, #fbc2eb 0%, #a6c1ee 100%) 100% 0 100% 0/0px
-    0 3px 0 stretch;
-  background-color: black;
+  box-shadow: 0px 15px 10px -23px #111;
+
+  padding-bottom: 30px;
+  display: flex;
 }
+
+.contents-box-top {
+  height: 100%;
+  width: 300px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.contents-box {
+  height: 100%;
+  width: 300px;
+
+  padding-top: 30px;
+}
+
 #contents-last {
   border: none;
 }
@@ -221,17 +276,6 @@ body {
   color: orange;
 }
 
-.carousel-test {
-  width: 480px;
-  height: 100%;
-}
-
-.testbox {
-  width: 766px;
-  height: 280px;
-  display: flex;
-}
-.testbox2 {
-  width: 306px;
-  height: 280px;
+body {
+  background-color: #fff;
 }

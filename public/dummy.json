@@ -1,25 +1,25 @@
 {
-  "category": [
+  "carousel": [
     {
-      "name": "list1",
-      "url": "url1",
-      "size": "large",
-      "color": "pink",
-      "image": "../img/pink_t.png"
+      "id": "1",
+      "url": "project1",
+      "head": "HEAD 1",
+      "contents": "contents 1",
+      "image": "carousel1.jpg"
     },
     {
-      "name": "list2",
-      "url": "url2",
-      "size": "small",
-      "color": "blue",
-      "image": "../img/blue_p.png"
+      "id": "2",
+      "url": "project2",
+      "head": "HEAD 2",
+      "contents": "contents 2",
+      "image": "carousel2.jpg"
     },
     {
-      "name": "list3",
-      "url": "url3",
-      "size": "large",
-      "color": "yellow",
-      "image": "../img/yellow_p.png"
+      "id": "3",
+      "url": "project3",
+      "head": "HEAD 3",
+      "contents": "contents 3",
+      "image": "carousel3.jpg"
     }
   ]
 }

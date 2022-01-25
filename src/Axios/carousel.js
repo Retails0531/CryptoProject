@@ -1,65 +1,89 @@
-import React, { Component } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Slider from "react-slick";
+import Gethttp from "./Axios";
 
-export default class PreviousNextMethods extends Component {
-  constructor(props) {
-    super(props);
-    this.next = this.next.bind(this);
-    this.previous = this.previous.bind(this);
-  }
-  next() {
-    this.slider.slickNext();
-  }
-  previous() {
-    this.slider.slickPrev();
-  }
+const Gallery = () => {
+  const url = "/dummy.json";
+  const data = Gethttp(url).carousel;
 
-  state = {
-    activeSlide: 0,
+  const [state, setState] = useState({
+    nav1: null,
+    nav2: null,
+  });
+
+  const slider1 = useRef();
+  const slider2 = useRef();
+
+  useEffect(() => {
+    setState({
+      nav1: slider1.current,
+      nav2: slider2.current,
+    });
+  }, []);
+
+  const { nav1, nav2 } = state;
+
+  const settingsSliderNav1 = {
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    autoplaySpeed: 3000,
+    arrows: false,
   };
 
-  render() {
-    const settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      fade: true,
-      beforeChange: (current, next) => this.setState({ activeSlide: next }),
-    };
-    return (
-      <div className="testbox">
-        <div className="carousel-test">
-          <Slider ref={(c) => (this.slider = c)} {...settings}>
-            <div key={1}>
-              <img src="carousel1.jpg" alt="..." />
-            </div>
-            <div key={2}>
-              <img src="carousel2.jpg" alt="..." />
-            </div>
-            <div key={3}>
-              <img src="carousel3.jpg" alt="..." />
-            </div>
-          </Slider>
-        </div>
-        <div className="testbox2">
-          <div style={{ textAlign: "center" }}>
-            <button className="button" onClick={this.previous}>
-              Previous
-            </button>
-            <button className="button" onClick={this.next}>
-              Next
-            </button>
-          </div>
-          <p>
-            activeSlide:
-            <strong>{this.state.activeSlide}</strong>
-            {this.state.activeSlide === 0 && <p>if slide = 0 ? visible</p>}
-            {this.state.activeSlide === 2 && <p>if slide = 2 ? visible</p>}
-          </p>
-        </div>
+  const settingsSliderNav2 = {
+    dots: true,
+    fade: true,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+  };
+
+  return (
+    <div className="imagesection">
+      <div className="imagesection-image">
+        <Slider
+          asNavFor={nav2}
+          ref={(slider) => (slider1.current = slider)}
+          {...settingsSliderNav1}
+        >
+          {data &&
+            data.map((carousel) => {
+              return (
+                <a href={carousel.url} key={carousel.id}>
+                  <img src={carousel.image} />
+                </a>
+              );
+            })}
+        </Slider>
       </div>
-    );
-  }
-}
+      <div className="imagesection-contents">
+        <Slider
+          asNavFor={nav1}
+          ref={(slider) => (slider2.current = slider)}
+          {...settingsSliderNav2}
+        >
+          {data &&
+            data.map((carousel) => {
+              return (
+                <div className="imagesection-contentsbox" key={carousel.id}>
+                  <div className="imagesection-contentsbox-a1">
+                    {carousel.head}
+                  </div>
+                  <div className="imagesection-contentsbox-a2">
+                    {carousel.contents}
+                  </div>
+                </div>
+              );
+            })}
+        </Slider>
+      </div>
+    </div>
+  );
+};
+
+export default Gallery;

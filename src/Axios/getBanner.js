@@ -1,6 +1,8 @@
-import Gethttp from "./Axios";
-import Carousel from "./carousel";
-import PreviousNextMethods from "../Axios/carousel";
+import Gallery from "../Axios/carousel";
+import Sidebar from "../Axios/sidebar";
+import Contentsbar from "../Axios/contents";
+import Contentsbar2 from "../Axios/contents2";
+import Contentsbar3 from "../Axios/contents3";
 
 export default function GetBanner() {
   return (
@@ -101,7 +103,7 @@ export default function GetBanner() {
         <section className="main">
           <div className="main-top">
             <div className="imagesection">
-              <PreviousNextMethods />
+              <Gallery />
             </div>
 
             <div className="project">
@@ -121,113 +123,18 @@ export default function GetBanner() {
               </a>
             </div>
             <div className="side-date">00/00/00 기준</div>
-
-            <div className="side-contents">
-              <div id="side-image">
-                <img id="side-image" src="/GameBanner/game_1.jpg"></img>
-              </div>
-              <div id="side-number">1</div>
-              <div className="side-box">
-                <div id="side-category">카테고리/카테고리</div>
-                <div id="side-name">게임 제목</div>
-                <div id="side-rate">100% 달성</div>
-              </div>
-            </div>
-
-            <div className="side-contents">
-              <div id="side-image">
-                <img id="side-image" src="/GameBanner/game_1.jpg"></img>
-              </div>
-              <div id="side-number">2</div>
-              <div className="side-box">
-                <div id="side-category">카테고리/카테고리</div>
-                <div id="side-name">게임 제목</div>
-                <div id="side-rate">100% 달성</div>
-              </div>
-            </div>
-
-            <div className="side-contents">
-              <div id="side-image">
-                <img id="side-image" src="/GameBanner/game_1.jpg"></img>
-              </div>
-              <div id="side-number">3</div>
-              <div className="side-box">
-                <div id="side-category">카테고리/카테고리</div>
-                <div id="side-name">게임 제목</div>
-                <div id="side-rate">100% 달성</div>
-              </div>
-            </div>
-
-            <div className="side-contents">
-              <div id="side-image">
-                <img id="side-image" src="/GameBanner/game_1.jpg"></img>
-              </div>
-              <div id="side-number">4</div>
-              <div className="side-box">
-                <div id="side-category">카테고리/카테고리</div>
-                <div id="side-name">게임 제목</div>
-                <div id="side-rate">100% 달성</div>
-              </div>
-            </div>
-
-            <div className="side-contents">
-              <div id="side-image">
-                <img id="side-image" src="/GameBanner/game_1.jpg"></img>
-              </div>
-              <div id="side-number">5</div>
-              <div className="side-box">
-                <div id="side-category">카테고리/카테고리</div>
-                <div id="side-name">게임 제목</div>
-                <div id="side-rate">100% 달성</div>
-              </div>
-            </div>
-
-            <div className="side-contents">
-              <div id="side-image">
-                <img id="side-image" src="/GameBanner/game_1.jpg"></img>
-              </div>
-              <div id="side-number">6</div>
-              <div className="side-box">
-                <div id="side-category">카테고리/카테고리</div>
-                <div id="side-name">게임 제목</div>
-                <div id="side-rate">100% 달성</div>
-              </div>
-            </div>
-
-            <div className="side-contents">
-              <div id="side-image">
-                <img id="side-image" src="/GameBanner/game_1.jpg"></img>
-              </div>
-              <div id="side-number">7</div>
-              <div className="side-box">
-                <div id="side-category">카테고리/카테고리</div>
-                <div id="side-name">게임 제목</div>
-                <div id="side-rate">100% 달성</div>
-              </div>
-            </div>
-
-            <div className="side-contents">
-              <div id="side-image">
-                <img id="side-image" src="/GameBanner/game_1.jpg"></img>
-              </div>
-              <div id="side-number">8</div>
-              <div className="side-box">
-                <div id="side-category">카테고리/카테고리</div>
-                <div id="side-name">게임 제목</div>
-                <div id="side-rate">100% 달성</div>
-              </div>
-            </div>
+            <Sidebar />
           </aside>
         </section>
         <div className="contents">
-          <h1>인기 장르</h1>
+          <Contentsbar />
         </div>
 
         <div className="contents">
-          <h1>급상승</h1>
+          <Contentsbar2 />
         </div>
         <div id="contents-last" className="contents">
-          <h1>공개 예정</h1>
+          <Contentsbar3 />
         </div>
       </main>
       <footer className="footer">
