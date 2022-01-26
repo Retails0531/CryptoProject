@@ -2,7 +2,7 @@
   "top": [
     {
       "id": "1",
-      "url": "project1",
+      "url": "project/1",
       "genre": "genre2",
       "production": "production1",
       "title": "game 1",
@@ -11,7 +11,7 @@
     },
     {
       "id": "2",
-      "url": "project2",
+      "url": "project/2",
       "genre": "genre2",
       "production": "production2",
       "title": "game 2",
@@ -20,7 +20,7 @@
     },
     {
       "id": "3",
-      "url": "project3",
+      "url": "project/3",
       "genre": "genre3",
       "production": "production3",
       "title": "game 3",

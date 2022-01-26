@@ -201,7 +201,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
+  padding-left: 10px;
 }
 
 .contents-box {
